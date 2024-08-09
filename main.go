@@ -48,10 +48,10 @@ func main() {
 
 	select {
 	case result := <-api1Chan:
-		fmt.Println(result)
+		fmt.Println("API 1 result:\n" + result)
 
 	case result := <-api2Chan:
-		fmt.Println(result)
+		fmt.Println("API 2 result:\n" + result)
 
 	case <-time.After(1 * time.Second):
 		fmt.Println("timeout")
